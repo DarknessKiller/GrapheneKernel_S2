@@ -6,7 +6,7 @@
     export KERNELDIR=`readlink -f .`
     export CROSS_COMPILE=/home/$USER/gcc-linaro-6.4.1-2018.05-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-   
     export ARCH=arm64
-    make onyx_defconfig
+    make graphene_s2_defconfig
     make -j8 | tee $KERNELDIR/built/kernel_output.txt
     rm -rf $KERNELDIR/built
     mkdir -p $KERNELDIR/built/
