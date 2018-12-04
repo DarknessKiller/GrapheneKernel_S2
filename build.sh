@@ -1,12 +1,12 @@
     #!/bin/bash
     clear
-    echo GrapheneKernel Compile Tool
+    echo OverdoseKernel Compile Tool
     echo By MrDarkness
     echo Please Sit Back And Chill...
     export KERNELDIR=`readlink -f .`
-    export CROSS_COMPILE=/home/$USER/aarch64-linux-gnu/bin/aarch64-linux-gnu-   
+    export CROSS_COMPILE=/home/$USER/aarch64-linux-android-4.9/bin/aarch64-linux-android-   
     export ARCH=arm64
-    make graphene_s2_defconfig
+    make overdose_s2_defconfig
     make -j8 | tee $KERNELDIR/built/kernel_output.txt
     rm -rf $KERNELDIR/built
     mkdir -p $KERNELDIR/built/
